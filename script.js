@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const spans = navToggle.querySelectorAll('span');
             if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                spans[0].style.transform = 'rotate(45deg) translateY(10px)';
                 spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+                spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
             } else {
                 spans[0].style.transform = '';
                 spans[1].style.opacity = '1';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 
-                if (entry.target.querySelector('.stat-number')) {
-                    animateCounter(entry.target.querySelector('.stat-number'));
+                const statNumber = entry.target.querySelector('.stat-number');
+                if (statNumber && !statNumber.classList.contains('counted')) {
+                    animateCounter(statNumber);
                 }
             }
         });
@@ -49,10 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollElements.forEach(el => observer.observe(el));
     
     function animateCounter(element) {
-        if (element.classList.contains('counted')) return;
-        
+        element.classList.add('counted');
         const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
+        const duration = 2500;
         const increment = target / (duration / 16);
         let current = 0;
         
@@ -61,48 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (current >= target) {
                 element.textContent = target;
                 clearInterval(timer);
-                element.classList.add('counted');
             } else {
                 element.textContent = Math.floor(current);
             }
         }, 16);
     }
-    
-    const parallaxElements = document.querySelectorAll('.parallax-bg, .floating-element, .visual-box');
-    let ticking = false;
-    
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                const scrolled = window.pageYOffset;
-                
-                parallaxElements.forEach((el, index) => {
-                    const rect = el.getBoundingClientRect();
-                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                    
-                    if (isVisible) {
-                        const speed = 0.3 + (index * 0.05);
-                        const yPos = -(scrolled * speed);
-                        const rotation = (scrolled * 0.02) % 360;
-                        
-                        if (el.classList.contains('parallax-bg')) {
-                            el.style.transform = `translateY(${yPos}px)`;
-                        } else if (el.classList.contains('floating-element')) {
-                            el.style.transform = `translateY(${yPos * 0.1}px) rotate(${rotation * 0.5}deg)`;
-                        } else if (el.classList.contains('visual-box')) {
-                            const distanceFromCenter = rect.top - (window.innerHeight / 2);
-                            const rotation = distanceFromCenter * 0.02;
-                            el.style.transform = `translateY(${yPos * 0.05}px) rotate(${rotation}deg) scale(1.05)`;
-                        }
-                    }
-                });
-                
-                ticking = false;
-            });
-            
-            ticking = true;
-        }
-    }, { passive: true });
     
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -110,22 +73,32 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formMessage = document.getElementById('formMessage');
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+            const name = document.getElementById('name').value;
             
-            formMessage.className = 'form-message success';
-            formMessage.textContent = `Thank you, ${formData.name}! Your message has been received. We'll get back to you soon.`;
+            formMessage.style.display = 'block';
+            formMessage.style.background = 'var(--beige-light)';
+            formMessage.style.color = 'var(--gray-900)';
+            formMessage.style.border = '1px solid var(--beige)';
+            formMessage.textContent = `Thank you, ${name}! Your message has been received. We'll get back to you soon.`;
             
             contactForm.reset();
             
             setTimeout(() => {
                 formMessage.style.display = 'none';
             }, 5000);
+        });
+        
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'var(--beige-dark)';
+                this.style.boxShadow = '0 0 0 3px rgba(209, 199, 193, 0.1)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.style.borderColor = 'var(--gray-200)';
+                this.style.boxShadow = 'none';
+            });
         });
     }
     
@@ -134,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offset = 80;
+                const offset = 100;
                 const targetPosition = target.offsetTop - offset;
                 
                 window.scrollTo({
@@ -153,10 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    const cards = document.querySelectorAll('.feature-card, .service-card, .program-card');
-    cards.forEach(card => {
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.transform = 'translateY(-10px)';
         });
         
         card.addEventListener('mouseleave', function() {
@@ -165,7 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const statNumbers = document.querySelectorAll('.stat-number');
-    statNumbers.forEach(stat => observer.observe(stat.parentElement));
+    statNumbers.forEach(stat => {
+        if (stat.parentElement) {
+            observer.observe(stat.parentElement);
+        }
+    });
     
-    console.log('EDIGHT (PTY) website loaded successfully! 🚀');
+    console.log('EDIGHT (PTY) - Sophisticated design loaded successfully ✨');
 });

@@ -27,76 +27,75 @@
 
     <section class="page-hero">
         <div class="container">
-            <h1 class="fade-in-up">Get in <span class="text-accent">Touch</span></h1>
-            <p class="fade-in-up delay-1">We'd love to hear from you</p>
+            <h1>Get in <span class="text-accent">Touch</span></h1>
+            <p>We'd love to hear from you</p>
         </div>
     </section>
 
-    <section class="contact-section">
+    <section class="section">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info scroll-slide-left">
-                    <h2>Contact Information</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;">
+                <div class="scroll-slide-left">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--gray-900); font-weight: 800;">Contact Information</h2>
                     <p class="lead">Reach out to us for any inquiries, project discussions, or training program applications.</p>
                     
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
+                    <div style="margin-top: 3rem;">
+                        <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                            <div style="font-size: 2rem; color: var(--beige-dark);">📍</div>
                             <div>
-                                <h4>Location</h4>
-                                <p>Pretoria, Gauteng<br>South Africa</p>
+                                <h4 style="margin-bottom: 0.5rem; color: var(--gray-900); font-size: 1.2rem; font-weight: 700;">Location</h4>
+                                <p style="color: var(--gray-600); line-height: 1.8;">Pretoria, Gauteng<br>South Africa</p>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+                        <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                            <div style="font-size: 2rem; color: var(--beige-dark);">📧</div>
                             <div>
-                                <h4>Email</h4>
-                                <p><a href="mailto:EDGARBRIGHTGROUP@GMAIL.COM">EDGARBRIGHTGROUP@GMAIL.COM</a></p>
+                                <h4 style="margin-bottom: 0.5rem; color: var(--gray-900); font-size: 1.2rem; font-weight: 700;">Email</h4>
+                                <p style="color: var(--gray-600); line-height: 1.8;"><a href="mailto:EDGARBRIGHTGROUP@GMAIL.COM" style="color: var(--beige-dark); text-decoration: none;">EDGARBRIGHTGROUP@GMAIL.COM</a></p>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
+                        <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                            <div style="font-size: 2rem; color: var(--beige-dark);">📞</div>
                             <div>
-                                <h4>Phone</h4>
-                                <p><a href="tel:0711578316">071 157 8316</a></p>
-                                <p><a href="tel:0724476949">072 447 6949</a></p>
+                                <h4 style="margin-bottom: 0.5rem; color: var(--gray-900); font-size: 1.2rem; font-weight: 700;">Phone</h4>
+                                <p style="color: var(--gray-600); line-height: 1.8;"><a href="tel:0711578316" style="color: var(--beige-dark); text-decoration: none;">071 157 8316</a><br><a href="tel:0724476949" style="color: var(--beige-dark); text-decoration: none;">072 447 6949</a></p>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">🕒</div>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div style="font-size: 2rem; color: var(--beige-dark);">🕒</div>
                             <div>
-                                <h4>Business Hours</h4>
-                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
-                                <p style="margin-top: 1rem;"><strong>Emergency IT Support:</strong> Available 24/7 for existing clients</p>
+                                <h4 style="margin-bottom: 0.5rem; color: var(--gray-900); font-size: 1.2rem; font-weight: 700;">Business Hours</h4>
+                                <p style="color: var(--gray-600); line-height: 1.8;">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                                <p style="margin-top: 1rem; color: var(--gray-700); font-weight: 600;"><strong>Emergency IT Support:</strong> Available 24/7 for existing clients</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form-wrapper scroll-slide-right">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="scroll-slide-right">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--gray-900); font-weight: 800;">Send Us a Message</h2>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label for="name" style="display: block; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Full Name</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); background: var(--white); font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                        <div>
+                            <label for="email" style="display: block; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Email Address</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); background: var(--white); font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                         </div>
                         
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                        <div>
+                            <label for="phone" style="display: block; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); background: var(--white); font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                         </div>
                         
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject" required>
+                        <div>
+                            <label for="subject" style="display: block; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Subject</label>
+                            <select id="subject" name="subject" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); background: var(--white); font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                                 <option value="">Select a subject</option>
                                 <option value="services">Service Inquiry</option>
                                 <option value="training">Training Programs</option>
@@ -106,26 +105,29 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                        <div>
+                            <label for="message" style="display: block; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Message</label>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); background: var(--white); font-family: inherit; font-size: 1rem; resize: vertical; min-height: 150px; transition: all 0.3s ease;"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
-                    <div id="formMessage" class="form-message"></div>
+                    <div id="formMessage" style="padding: 1rem; border-radius: 0; margin-top: 1rem; display: none;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="map-section scroll-reveal">
+    <section class="section section-light scroll-reveal">
         <div class="container">
-            <h2 class="section-title">Visit Us in Pretoria</h2>
-            <div class="map-placeholder">
-                <div class="map-overlay">
-                    <p>📍 Pretoria, Gauteng, South Africa</p>
+            <div class="section-header">
+                <h2 class="section-title">Visit Us in Pretoria</h2>
+            </div>
+            <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-700) 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+                <div style="text-align: center; color: var(--beige); position: relative; z-index: 2;">
+                    <p style="font-size: 1.5rem; font-weight: 600;">📍 Pretoria, Gauteng, South Africa</p>
                 </div>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 60%; background: radial-gradient(circle, var(--beige) 0%, transparent 70%); opacity: 0.1;"></div>
             </div>
         </div>
     </section>
@@ -135,22 +137,22 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>EDIGHT (PTY)</h3>
-                    <p>Empowering individuals, businesses, and communities through modern, secure, and transformative technology.</p>
+                    <p>Empowering individuals, businesses, and communities through modern, secure, and transformative technology solutions.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.8rem;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="about.html">About</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="services.html">Services</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="training.html">Training</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>📍 Pretoria, Gauteng</p>
-                    <p>📧 EDGARBRIGHTGROUP@GMAIL.COM</p>
+                    <p>📧 <a href="mailto:EDGARBRIGHTGROUP@GMAIL.COM">EDGARBRIGHTGROUP@GMAIL.COM</a></p>
                     <p>📞 071 157 8316 | 072 447 6949</p>
                 </div>
             </div>
