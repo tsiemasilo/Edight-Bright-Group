@@ -1,22 +1,26 @@
 {
-  "name": "edight-bright-group",
+  "name": "edight-pty-edgar-bright-group",
   "version": "1.0.0",
-  "description": "A modern, responsive website for Edight Bright Group",
+  "description": "Modern website for EDIGHT (PTY) - EDGAR BRIGHT GROUP, an IT solutions company in Pretoria, South Africa. Features advanced scroll animations and responsive design.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "keywords": [
-    "website",
-    "business",
-    "static-site"
+    "IT-solutions",
+    "Pretoria",
+    "South-Africa",
+    "software-development",
+    "cybersecurity",
+    "training",
+    "scroll-animations"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tsiemasilo/Edight-Bright-Group.git"
   },
-  "author": "",
+  "author": "Mantsie Senyane Bright & Edgar Tshwarelo Moloantoa",
   "license": "ISC",
   "engines": {
     "node": ">=18.0.0"

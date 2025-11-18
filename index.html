@@ -3,67 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edight Bright Group</title>
+    <title>EDIGHT (PTY) - Empowering Africa's Digital Future</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Edight Bright Group</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">EDIGHT<span class="logo-accent">(PTY)</span></a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="home" class="hero">
-            <h2>Welcome to Edight Bright Group</h2>
-            <p>Your trusted partner for excellence</p>
-        </section>
-        
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing exceptional services and solutions.</p>
-        </section>
-        
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Service One</h3>
-                    <p>Description of your first service</p>
+        </div>
+    </nav>
+
+    <section class="hero parallax-section">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up delay-1">Empowering Africa's <span class="text-accent">Digital Future</span></h1>
+            <p class="fade-in-up delay-2">Innovative IT Solutions | Security Technologies | Digital Empowerment</p>
+            <div class="hero-buttons fade-in-up delay-3">
+                <a href="services.html" class="btn btn-primary">Our Services</a>
+                <a href="contact.html" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">💻</div>
+                    <h3>Hardware Solutions</h3>
+                    <p>Premium laptops, printers, and IT accessories with expert maintenance</p>
                 </div>
-                <div class="service-card">
-                    <h3>Service Two</h3>
-                    <p>Description of your second service</p>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">📱</div>
+                    <h3>Software Development</h3>
+                    <p>Custom software and mobile applications tailored to your needs</p>
                 </div>
-                <div class="service-card">
-                    <h3>Service Three</h3>
-                    <p>Description of your third service</p>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Security Tech</h3>
+                    <p>CCTV, access control, and IoT security solutions</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🎓</div>
+                    <h3>IT Training</h3>
+                    <p>Empowering the next generation through hands-on experience</p>
                 </div>
             </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for more information</p>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Edight Bright Group. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section class="about-preview parallax-section-light">
+        <div class="container">
+            <div class="split-content">
+                <div class="split-text scroll-slide-left">
+                    <h2>About <span class="text-accent">EDIGHT</span></h2>
+                    <p class="lead">EDGAR BRIGHT GROUP is a visionary IT solutions company based in Pretoria, Gauteng.</p>
+                    <p>Founded by Mantsie Senyane Bright and Edgar Tshwarelo Moloantoa, we operate at the intersection of technology, innovation, and empowerment. We specialize in delivering comprehensive IT solutions that transform businesses and communities across Africa.</p>
+                    <p>From cutting-edge software development to robust security systems, we provide end-to-end technology services designed for the modern digital landscape.</p>
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="split-image scroll-slide-right">
+                    <div class="image-wrapper">
+                        <div class="floating-element gradient-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Trainees Empowered</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content scroll-scale">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's build the future together with cutting-edge IT solutions</p>
+                <a href="contact.html" class="btn btn-large">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>EDIGHT (PTY)</h3>
+                    <p>Empowering individuals, businesses, and communities through modern, secure, and transformative technology.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>📍 Pretoria, Gauteng</p>
+                    <p>📧 EDGARBRIGHTGROUP@GMAIL.COM</p>
+                    <p>📞 071 157 8316 | 072 447 6949</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EDIGHT (PTY). All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
