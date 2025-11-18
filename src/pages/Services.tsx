@@ -5,9 +5,7 @@ import {
   Shield, 
   Cloud, 
   Database, 
-  Network, 
-  Settings, 
-  Smartphone,
+  Network,
   CheckCircle,
   ArrowRight
 } from 'lucide-react'

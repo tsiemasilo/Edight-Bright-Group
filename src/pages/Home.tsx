@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Laptop, Code, Shield, Cloud, GraduationCap, Zap, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, Laptop, Code, Shield, Cloud, GraduationCap, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
+import type { FormEvent, ChangeEvent } from 'react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ const Contact = () => {
     message: '',
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     // Handle form submission here
     console.log('Form submitted:', formData)
@@ -19,7 +20,7 @@ const Contact = () => {
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
