@@ -1,0 +1,24 @@
+{
+  "name": "edight-bright-group",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Edight Bright Group",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "website",
+    "business",
+    "static-site"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsiemasilo/Edight-Bright-Group.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
